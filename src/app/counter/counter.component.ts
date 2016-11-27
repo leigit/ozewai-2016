@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
+  styleUrls: ['./counter.component.scss']
 })
 export class CounterComponent implements OnInit {
   counterValue = 0;
@@ -26,7 +26,7 @@ export class CounterComponent implements OnInit {
   increment() {
     this.counter++;
   }
-  
+
   constructor() { }
 
   ngOnInit() {
