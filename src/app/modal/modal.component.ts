@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
-  public visible = false;
+   public visible = false;
    private visibleAnimate = false;
 
    public show(): void {
@@ -18,14 +18,15 @@ export class ModalComponent implements OnInit {
    public hide(): void {
      this.visibleAnimate = false;
      setTimeout(() => this.visible = false, 300);
+
    }
 
   constructor() { }
 
   ngOnInit() {
 
-      var previouslyFocused = document.activeElement;
-      var modal        = <HTMLElement>document.querySelector('.modal');
+      let previouslyFocused = <HTMLElement>document.activeElement;
+      let modal        = <HTMLElement>document.querySelector('.modal');
       modal.addEventListener('keydown', trapTabKey);
       let focusableElements = modal.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]');
 
@@ -51,10 +52,12 @@ export class ModalComponent implements OnInit {
               firstItem.focus();
             }
           }
+          // close on esc key
         } else if (e.keyCode === 27) {
           close();
         }
       }
+
   }
 
 }

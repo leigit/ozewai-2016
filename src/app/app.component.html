@@ -1,18 +1,30 @@
 <h1>
-  {{title}}
+  Angular2 A11y
 </h1>
+<h2>Buttons</h2>
 
-<button type="button" (click)="modal.show()">test</button>
+  <app-button></app-button>
+
+<h2>Modal</h2>
+
+<button type="button" class="btn btn-success" (click)="modal.show()">Launch Modal</button>
 <app-modal>
   <div class="app-modal-header">
-    header
+    Modal header
   </div>
   <div class="app-modal-body">
     Whatever content you like, form fields, anything
     <a href="">I'm a link and should be tabbable</a>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+      </div>
+    </form>
+
   </div>
   <div class="app-modal-footer">
-    <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
+    <button type="button" class="btn btn-default pull-left" (click)="modal.hide()">Close</button>
     <button type="button" class="btn btn-primary">Save changes</button>
   </div>
 </app-modal>
