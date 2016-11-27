@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ModalComponent } from './modal/modal.component';
 import { ButtonComponent } from './button/button.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalComponent,
-    ButtonComponent
+    ButtonComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,

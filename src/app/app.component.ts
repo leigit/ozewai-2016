@@ -11,6 +11,7 @@ import { ModalComponent } from './modal/modal.component';
 
 export class AppComponent {
   title = 'app works!';
+  counterValue = 5;
   @ViewChild(ModalComponent)
   public readonly modal: ModalComponent;
 
